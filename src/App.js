@@ -35,9 +35,14 @@ const App = () => {
     },
   ];
 
+  const addExpenseHandler = (expense) => {
+    console.log("In App.js");
+    console.log(expenses);
+  };
+
   return (
-    <Card className="expenses">
-      <NewExpense />
+    <Card className="expense">
+      <NewExpense onAddExpense={addExpenseHandler} />
       <ExpenseItem
         title={expenses[0].title}
         amount={expenses[0].amount}
